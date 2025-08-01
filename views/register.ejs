@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="bg-blur"></div>
+<div class="form-container">
+<div class="box">
+    <h2>Register</h2>
+    <% if (message) { %>
+        <p style="color: red;"><%= message %></p>
+    <% } %>
+    <form method="POST" action="/register">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <!--<input type="file" name="faceImage" accept="image/*" required />-->
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+</div>
+</div>
+</body>
+</html>

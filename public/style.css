@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BLURRED BACKGROUND IMAGE */
+.bg-blur {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/emp.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* FORM STYLING */
+
+  .form-container {
+    background: rgba(78, 139, 170, 0.9); /* slightly transparent background */
+    padding: 50px;
+    opacity: 0.9; /* slight transparency */
+    border-radius: 20px;
+    border: 2px solid #100a0a; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px); /* subtle blur inside the box */
+  }
+
+input, button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+}
+
+button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+.google-login-btn:hover {
+    opacity: 0.8;
+}

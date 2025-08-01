@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Face Verification</title>
+</head>
+<body>
+  <h2>Verifying your face...</h2>
+  <script>
+    // Immediately call the Python recognizer when this page loads
+    fetch('/run-face-recognition')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          alert('✅ Face verified successfully!');
+          window.location.href = '/dashboard';
+        } else {
+          alert('❌ Face not recognized!');
+          window.location.href = '/login';
+        }
+      })
+      .catch(err => {
+        alert('❌ Error running face recognition');
+        console.error(err);
+        window.location.href = '/login';
+      });
+  </script>
+</body>
+</html>
